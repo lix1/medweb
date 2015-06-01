@@ -1,15 +1,40 @@
-<div class="homepage">
-
+<div class="homepage" ng-controller="HeaderCtrl">
+  <menu class='animate-hide' ng-hide="hide">
+    <div class="btn-close-item">
+      <a href="" class="btn-close" ng-click="hide=true"><i class="fa fa-times"></i>关闭</a>
+    </div>
+    <div class="container">
+      <ul hidden>
+        <li><a href="">Sign In</a></li>
+        <li><a href="">Create Account</a></li>
+      </ul>
+      <ul>
+        <li><a href="">国外医院</a></li>
+        <li><a href="">服务流程</a></li>
+      </ul>
+      <ul>
+        <li><a href="">Pricing</a></li>
+      </ul>
+      <ul>
+        <li><a href="">Basic</a></li>
+        <li><a href="">Plus</a></li>
+        <li><a href="">Premium</a></li>
+      </ul>
+      <ul class="ul-contact-us">
+        <li><a href="" class="btn-contact-us">联系我们</a></li>
+      </ul>
+    </div>
+  </menu>
   <div class="header-wrapper">
     <div class="container">
       <div class="header-section">
         <img src="images/logo.png" alt="" class="logo_style">
 
         <div class="right-button-group pull-right">
-          <a href="/pricing" class="ntab">Pricing</a>
-          <a href="/hospitals" class="ntab">Hospitals</a>
+          <a href="/pricing" class="ntab hidden-xs">Pricing</a>
+          <a href="/hospitals" class="ntab hidden-xs">Hospitals</a>
 
-          <a href="" class="menu"><i class="fa fa-bars"></i></a>
+          <a href="" class="menu" ng-click="hide=false"><i class="fa fa-bars"></i></a>
         </div>
       </div>
 
